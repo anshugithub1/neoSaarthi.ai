@@ -1,0 +1,29 @@
+{
+  "name": "neoSaarthi.ai",
+  "manifest_version": 3,
+
+  "version": "1.0",
+  "description": "AI-Powered assistant",
+  "permissions": ["activeTab", "storage", "sidePanel", "scripting"],
+  "icons": {
+    "32": "./nS-32.png",
+    "48": "./nS-48.png"
+  },
+  "action": {
+    "default_title": "neoSaarthi",
+    "default_icon": {
+      "32": "./nS-32.png",
+      "48": "./nS-48.png"
+    }
+  },
+  "side_panel": {
+    "default_path": "sidePanel.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["http://localhost:8080/*", "<all_urls>"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
